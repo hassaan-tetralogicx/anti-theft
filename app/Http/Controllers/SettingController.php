@@ -34,12 +34,6 @@ class SettingController extends Controller
             elseif('image_protection' == $request->type){
                 $find_id->image_protection = $request->status;
             }
-            elseif('disable_right_click' == $request->type){
-                $find_id->disable_right_click = $request->status;
-            }
-            elseif('disable_short_keys' == $request->type){
-                $find_id->disable_short_keys = $request->status;
-            }
 
             $find_id->save();
         }
