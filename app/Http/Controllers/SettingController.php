@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Setting;
 use App\Plan;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,12 +14,9 @@ class SettingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-//        if(){
-//
-//        }
-//        dd(Auth::user());
         $setting = Setting::where('shop_id', Auth::user()->id)->first();
         $check = Auth::user()->plan_id;
         return view('welcome')->with(['status' => $setting, 'plan_check' => $check]);
@@ -26,16 +24,10 @@ class SettingController extends Controller
 
     public function activation(Request $request, $id)
     {
-
-//        dump($request->all());
-//        dd($id);
-//        $find_id = Setting::find($id);
         $find_id = Setting::where('shop_id', $id)->first();
-//        dd($find_id);
-//        dd($id == Auth()->user()->id);
+
         if ($find_id != null) {
-//            $status = Setting::where('shop_id', $id);
-//            dd($status);
+
             if('text_protection' == $request->type){
                 $find_id->text_protection = $request->status;
             }
@@ -63,19 +55,55 @@ class SettingController extends Controller
         }
 //        return response()->json
     }
-    public function response(){
-//        dd(123);
-        return 123;
-//        $setting = Setting::where('shop_id', Auth::user()->id)->first();
-//        if($setting->text_protection == 1){
-//
-//        }
+    public function response(Request $request)
+    {
+//        return response("".$request->input('shop'))->header('Content-Type', 'application/javascript');
+
+        $shop = $request->input('shop');
+//        dd($shop);
+        $shop_id = User::where('name', $shop)->first();
+//        dd($shop_id);
+        $check_setting = Setting::where('shop_id', $shop_id->id)->first();
+        $html = "";
+        $xhtml = "";
+        if($check_setting->disable_right_click == 1) {
+            $html .= "document.addEventListener('contextmenu', event => event.preventDefault());";
+
+        }
+
+       if($check_setting->text_protection == 1) {
+           $html .= "document.addEventListener('copy paste cut', event => event.preventDefault());
+           document.onkeydown = function (e) {
+                return false;
+           }; document.addEventListener('contextmenu', event => event.preventDefault());";
+
+        }
+
+        if($check_setting->image_protection == 1) {
+            $html .= "document.ondragstart = function () {
+                return false;
+            }; document.onkeydown = function (e) {
+                return false;
+           };";
+        }
+
+        return response($html)->header('Content-Type', 'application/javascript');
+
+    }
+
+    public function pricing()
+    {
+        $user = User::where('id', auth()->user()->id)->first();
+//        dd($user->plan);
+//        $user_plan = $user->plan
+        return view('pricing')->with('user', $user);
     }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //

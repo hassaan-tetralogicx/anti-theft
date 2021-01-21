@@ -323,16 +323,13 @@ return [
 
     'scripttags' => [
 
-            [
-                'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', 'https://antitheft.test/response'),
-                'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
-                'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
-            ],
-
-
-
+//        [
+//            'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', 'https://antitheft.test/scripttags/right_click.js'),
+//            'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
+//            'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
+//        ],
         [
-            'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', 'https://antitheft.test/scripttags/right_click.js'),
+            'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', 'https://antitheft.test/response.js'),
             'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
             'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
         ]

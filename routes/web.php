@@ -20,9 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'SettingController@index')->middleware(['auth.shopify','billable'])->name('home');
 //Route::resource('settings', 'SettingController');
 Route::post('/setting/{setting}', 'SettingController@activation')->name('setting.activation');
-Route::get('/response', 'SettingController@response');
+Route::get('/response.js', 'SettingController@response');
 
+Route::get('/pricing-plans', 'SettingController@pricing');
 
-//Auth::routes();
+Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
