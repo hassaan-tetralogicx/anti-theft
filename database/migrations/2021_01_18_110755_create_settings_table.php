@@ -18,8 +18,8 @@ class CreateSettingsTable extends Migration
             $table->unsignedBigInteger('shop_id');
             $table->boolean('text_protection')->nullable();
             $table->boolean('image_protection')->nullable();
-            $table->boolean('disable_right_click')->nullable();
-            $table->boolean('disable_short_keys')->nullable();
+//            $table->boolean('disable_right_click')->nullable();
+//            $table->boolean('disable_short_keys')->nullable();
             $table->timestamps();
         });
     }

@@ -99,13 +99,13 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
-        // $(document).on("click", ".disable_right_click", function () {
-        //     var disable_right_click = $(document);
-        //     //disable right button
-        //     disable_right_click.on('contextmenu', function (e) {
-        //         // e.preventDefault(); //disable cut,copy,paste
-        //         return false;
-        //     });
-        // });
+        $(document).on("click", ".disable_right_click", function () {
+            var disable_right_click = $(document);
+            //disable right button
+            disable_right_click.on('contextmenu', function (e) {
+                // e.preventDefault(); //disable cut,copy,paste
+                return false;
+            });
+        });
     </script>
 @endsection

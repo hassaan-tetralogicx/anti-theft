@@ -65,11 +65,6 @@ class SettingController extends Controller
 //        dd($shop_id);
         $check_setting = Setting::where('shop_id', $shop_id->id)->first();
         $html = "";
-        $xhtml = "";
-        if($check_setting->disable_right_click == 1) {
-            $html .= "document.addEventListener('contextmenu', event => event.preventDefault());";
-
-        }
 
        if($check_setting->text_protection == 1) {
            $html .= "document.addEventListener('copy paste cut', event => event.preventDefault());
@@ -84,7 +79,7 @@ class SettingController extends Controller
                 return false;
             }; document.onkeydown = function (e) {
                 return false;
-           };";
+           }; document.addEventListener('contextmenu', event => event.preventDefault());";
         }
 
         return response($html)->header('Content-Type', 'application/javascript');
