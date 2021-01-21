@@ -15,8 +15,9 @@
                         <div>
 
                             <p>{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</p>
-                            <a class="" href="/pricing-plans">Click here to upgarde Plan</a>
-
+                            @if(Illuminate\Support\Facades\Auth::user()->plan->name == 'Free Plan')
+                                <a href="/pricing-plans">Click here to upgarde Plan</a>
+                            @endif
                         </div>
 
                     </div>
@@ -24,7 +25,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             Text Protection
-                            <label class="switch ">
+                            <label class="switch">
                                 <input @if($status != null) @if($status->text_protection == 1) checked @endif @endif data-route="{{route('setting.activation', Auth::user()->id)}}" data-csrf="{{csrf_token()}}" type="checkbox" data-type="text_protection" name="text_protection" class="success status">
                                 <span class="slider"></span>
                             </label>
@@ -37,9 +38,9 @@
                                         <input @if($status != null) @if($status->image_protection == 1) checked @endif @endif data-route="{{route('setting.activation', Auth::user()->id)}}" data-csrf="{{csrf_token()}}" type="checkbox" data-type="image_protection" name="image_protection" class="success status">
                                         <span class="slider"></span>
                                     @else
-                                        <div id="disabled-button-wrapper" data-placement="right" data-toggle="tooltip" data-title="Upgrade your price plan to enable this feature">
-                                            <input type="checkbox" class="success btn status" disabled>
-                                            <span class="slider" disabled></span>
+                                        <div id="disabled-button-wrapper"data-toggle="tooltip" data-placement="bottom" data-title="Upgrade your price plan to enable this feature">
+                                            <input type="checkbox" class="success disable status" disabled>
+                                            <span class="slider"></span>
                                         </div>
                                     @endif
                                 </label>

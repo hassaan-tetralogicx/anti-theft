@@ -74,13 +74,13 @@
                 display: inline-block;
             }
 
-            #disabled-button-wrapper .btn[disabled] {
+            .disable[disabled] {
                 pointer-events: none;
             }
 
-            #disabled-button-wrapper .slider[disabled] {
-                pointer-events: none;
-            }
+            /*#disabled-button-wrapper .slider[disabled] {*/
+            /*    pointer-events: none;*/
+            /*}*/
 
             #disabled-button-wrapper {
                 cursor: not-allowed;
