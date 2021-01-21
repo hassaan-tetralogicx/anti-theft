@@ -74,7 +74,7 @@
                 display: inline-block;
             }
 
-            #disabled-button-wrapper .btn[disabled] {
+            #disabled-button-wrapper .slider[disabled] {
                 pointer-events: none;
             }
 
