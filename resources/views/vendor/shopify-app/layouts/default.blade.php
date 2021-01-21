@@ -77,9 +77,7 @@
             .disable[disabled] {
                 pointer-events: none;
             }
-            .slider {
-                pointer-events: none;
-            }
+
 
 
             /*#disabled-button-wrapper .slider[disabled] {*/
