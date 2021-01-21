@@ -39,7 +39,7 @@
                                     @else
                                         <div id="disabled-button-wrapper" data-placement="right" data-toggle="tooltip" data-title="Upgrade your price plan to enable this feature">
                                             <input type="checkbox" class="success btn status" disabled>
-                                            <span class="slider"></span>
+                                            <span class="slider" disabled></span>
                                         </div>
                                     @endif
                                 </label>
