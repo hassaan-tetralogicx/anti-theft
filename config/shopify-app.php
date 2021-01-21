@@ -329,7 +329,7 @@ return [
 //            'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
 //        ],
         [
-            'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', 'https://antitheft.test/response.js'),
+            'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', 'https://phpstack-176572-1715310.cloudwaysapps.com/response.js'),
             'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
             'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
         ]
