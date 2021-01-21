@@ -74,6 +74,10 @@
                 display: inline-block;
             }
 
+            #disabled-button-wrapper .btn[disabled] {
+                pointer-events: none;
+            }
+
             #disabled-button-wrapper .slider[disabled] {
                 pointer-events: none;
             }
