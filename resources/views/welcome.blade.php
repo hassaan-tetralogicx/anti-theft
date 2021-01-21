@@ -34,8 +34,8 @@
                                 Image Protection
                                 <label class="switch ">
                                     @if($plan_check == 2)
-                                    <input @if($status != null) @if($status->image_protection == 1) checked @endif @endif data-route="{{route('setting.activation', Auth::user()->id)}}" data-csrf="{{csrf_token()}}" type="checkbox" data-type="image_protection" name="image_protection" class="success status">
-                                    <span class="slider"></span>
+                                        <input @if($status != null) @if($status->image_protection == 1) checked @endif @endif data-route="{{route('setting.activation', Auth::user()->id)}}" data-csrf="{{csrf_token()}}" type="checkbox" data-type="image_protection" name="image_protection" class="success status">
+                                        <span class="slider"></span>
                                     @else
                                         <div id="disabled-button-wrapper" data-placement="right" data-toggle="tooltip" data-title="Upgrade your price plan to enable this feature">
                                             <input type="checkbox" class="success btn status" disabled>
