@@ -79,9 +79,8 @@
             /*    pointer-events: none;*/
             /*}*/
 
-            .tool {
+            #disabled-button-wrapper {
                 pointer-events: none;
-
             }
 
             /*#disabled-button-wrapper .slider[disabled] {*/

@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="px-3 mt-3 pb-md-4 text-center d-flex justify-content-between">
+                <div class="px-3 mt-5 pb-md-4 text-center d-flex justify-content-between">
                     <div>
                         <h1 class="display-4">Desktop Settings</h1>
                     </div>
@@ -15,6 +15,8 @@
                         <h4 class="my-1">{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</h4>
                         @if(Illuminate\Support\Facades\Auth::user()->plan->name == 'Free Plan')
                             <a href="/pricing-plans" class="btn btn-primary">Upgarde Plan</a>
+                        @else
+                            <a href="/pricing-plans" class="btn btn-primary">View Plans</a>
                         @endif
                         {{--                            <a class="btn btn-light my-3" href="/">Back</a>--}}
                     </div>
