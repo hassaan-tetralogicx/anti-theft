@@ -9,41 +9,70 @@
             <div class="col-md-12">
                 <div class="card" style="margin:70px 0">
                     <!-- Default panel contents -->
-                    <div class="card-header d-flex justify-content-between">
-
-                        <p >Desktop Settings</p>
+                    <div class="px-0 py-3 pb-md-4 mx-auto text-center d-flex justify-content-between">
                         <div>
-
+                            <h1 class="display-2">Desktop Settings</h1>
+                        </div>
+                        <div>
                             <p>{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</p>
                             @if(Illuminate\Support\Facades\Auth::user()->plan->name == 'Free Plan')
-                                <a href="/pricing-plans">Click here to upgarde Plan</a>
+                                <a href="/pricing-plans" class="btn btn-primary">upgarde Plan</a>
                             @endif
+{{--                            <a class="btn btn-light my-3" href="/">Back</a>--}}
                         </div>
-
                     </div>
+{{--                    <p >Desktop Settings</p>--}}
+{{--                    <div class="card-header d-flex justify-content-between">--}}
+{{--                        <div>--}}
+
+{{--                            <p>{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</p>--}}
+{{--                            @if(Illuminate\Support\Facades\Auth::user()->plan->name == 'Free Plan')--}}
+{{--                                <a href="/pricing-plans">Click here to upgarde Plan</a>--}}
+{{--                            @endif--}}
+{{--                        </div>--}}
+
+{{--                    </div>--}}
 
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            Text Protection
+                        <li class="list-group-item d-flex justify-content-between">
+                            <div>Text Protection
+                                <p>Use this option to enable text protection</p>
+                            </div>
+                            <div>
                             <label class="switch">
                                 <input @if($status != null) @if($status->text_protection == 1) checked @endif @endif data-route="{{route('setting.activation', Auth::user()->id)}}" data-csrf="{{csrf_token()}}" type="checkbox" data-type="text_protection" name="text_protection" class="success status">
                                 <span class="slider"></span>
                             </label>
+
+                            </div>
                         </li>
 
-                            <li class="list-group-item">
-                                Image Protection
-                                <label class="switch ">
+                            <li class="list-group-item d-flex justify-content-between">
+
                                     @if($plan_check == 2)
-                                        <input @if($status != null) @if($status->image_protection == 1) checked @endif @endif data-route="{{route('setting.activation', Auth::user()->id)}}" data-csrf="{{csrf_token()}}" type="checkbox" data-type="image_protection" name="image_protection" class="success status">
-                                        <span class="slider"></span>
-                                    @else
-                                        <div id="disabled-button-wrapper"data-toggle="tooltip" data-placement="bottom" data-title="Upgrade your price plan to enable this feature">
-                                            <input type="checkbox" class="success disable status" disabled>
-                                            <span class="slider"></span>
+                                        <div>
+                                        Image Protection
+                                            <p>Use this option to enable text protection</p>
                                         </div>
+                                        <div>
+                                            <label class="switch ">
+                                                <input @if($status != null) @if($status->image_protection == 1) checked @endif @endif data-route="{{route('setting.activation', Auth::user()->id)}}" data-csrf="{{csrf_token()}}" type="checkbox" data-type="image_protection" name="image_protection" class="success status">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                    @else
+                                            <div>
+                                                Image Protection
+                                                <p>Upgrade price plan to enable this option</p>
+                                            </div>
+                                            <label class="switch ">
+                                                <div id="disabled-button-wrapper"data-toggle="tooltip" data-placement="bottom" data-title="Upgrade your price plan to enable this feature">
+                                                    <input type="checkbox" class="success status" disabled>
+                                                    <span class="slider"></span>
+                                                </div>
+                                            </label>
                                     @endif
-                                </label>
+
                             </li>
 
 

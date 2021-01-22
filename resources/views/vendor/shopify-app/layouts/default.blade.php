@@ -72,13 +72,17 @@
             }
             #disabled-button-wrapper {
                 display: inline-block;
+
             }
 
-            .disable[disabled] {
+            /*.disable[disabled] {*/
+            /*    pointer-events: none;*/
+            /*}*/
+
+            #disabled-button-wrapper {
                 pointer-events: none;
+
             }
-
-
 
             /*#disabled-button-wrapper .slider[disabled] {*/
             /*    pointer-events: none;*/

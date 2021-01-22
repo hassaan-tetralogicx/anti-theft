@@ -6,9 +6,9 @@
     <div class="container">
         <div class="pricing-header px-0 py-3  pb-md-4 mx-auto text-center d-flex justify-content-between">
             <div>
-            <h1 class="display-4 ">Pricing Plans</h1></div>
+            <h1 class="display-2 ">Pricing Plans</h1></div>
             <div>
-            <a class="btn btn-light my-3" href="/">Back</a></div>
+            <a class="btn btn-primary my-3" href="/">Back</a></div>
         </div>
         <div class="card-deck mb-3 text-center">
             <div class="card mb-4 box-shadow">
@@ -51,7 +51,6 @@
                         <a class="btn btn-lg btn-block btn-primary" href="{{ route('billing', ['plan' => 2]) }}">Upgrade</a>
 {{--                        <button type="button" class="btn btn-lg btn-block btn-primary">Upgrade</button>--}}
                     @endif
-
                 </div>
             </div>
         </div>
