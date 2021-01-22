@@ -24,8 +24,8 @@
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Plan</th>
-                                <th scope="col">Text Protection</th>
-                                <th scope="col">Image Protection</th>
+                                <th scope="col" class="text-center">Text Protection</th>
+                                <th scope="col" class="text-right">Image Protection</th>
 {{--                                    <th>Disable Right Click</th>--}}
                             </tr>
                         </thead>
