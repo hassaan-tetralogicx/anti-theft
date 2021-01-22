@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PlanSeeder extends Seeder
 {
@@ -29,7 +30,7 @@ class PlanSeeder extends Seeder
             'interval' => 'EVERY_30_DAYS',
             'capped_amount' => 10.00,
             'terms' => 'Test terms',
-            'trial_days' => 7,
+            'trial_days' => 0,
             'test' => true,
             'on_install' => 0,
         ]);
