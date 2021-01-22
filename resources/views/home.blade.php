@@ -35,9 +35,9 @@
                                     <td>{{$shop->email}}</td>
                                     <td>
                                         @if($shop->plan_id == 1)
-                                            <span class="p-1 badge badge-primary">Free Plan</span>
+                                            <span class="p-2 badge badge-primary">Free Plan</span>
                                         @else
-                                            <span class="p-1 badge badge-success">Paid Plan</span>
+                                            <span class="p-2 badge badge-success">Paid Plan</span>
                                         @endif
                                     </td>
                                     <td>
@@ -68,6 +68,14 @@
 {{--                                                @else--}}
 {{--                                                   <span>No settings selected yet!</span>--}}
 {{--                                                @endif--}}
+                                    </td>
+                                    <td>
+                                        @if($shop->setting != null)
+                                            @if($shop->setting->text_protection == 1)
+                                                <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
+                                                <span class="slider"></span>
+                                            @endif
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
