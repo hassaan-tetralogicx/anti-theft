@@ -54,7 +54,9 @@ class AppUninstalledJob implements ShouldQueue
 
         $shop = User::where('name', $this->shopDomain)->first();
         $setting = Setting::where('shop_id', $shop->id)->first();
-        $setting->delete();
+        if($setting != null){
+            $setting->delete();
+        }
         $shop->delete();
 
 
