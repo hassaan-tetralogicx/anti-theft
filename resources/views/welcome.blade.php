@@ -14,7 +14,7 @@
                     <div>
                         <p class="my-1">{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</p>
                         @if(Illuminate\Support\Facades\Auth::user()->plan->name == 'Free Plan')
-                            <a href="/pricing-plans" class="btn btn-primary">Upgarde Plan</a>
+                            <a href="/pricing-plans" class="btn btn-primary">Upgrade Plan</a>
                         @else
                             <a href="/pricing-plans" class="btn btn-primary">View Plans</a>
                         @endif
@@ -36,7 +36,6 @@
                             </div>
                         </li>
                             <li class="list-group-item d-flex justify-content-between">
-
                                     @if($plan_check == 2)
                                         <div>
                                             <h3>Image Protection</h3>

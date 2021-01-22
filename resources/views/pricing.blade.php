@@ -4,7 +4,7 @@
 
 
     <div class="container">
-        <div class="pricing-header px-0 py-3  pb-md-4 mx-auto text-center d-flex justify-content-between">
+        <div class="pricing-header mt-5 pb-md-4 mx-auto text-center d-flex justify-content-between">
             <div>
             <h1 class="display-4 ">Pricing Plans</h1></div>
             <div>
