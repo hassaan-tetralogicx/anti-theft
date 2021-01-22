@@ -64,17 +64,18 @@
                                     <td>{{$shop->email}}</td>
                                     <td>
                                         @if($shop->plan_id == 1)
-                                            <span class="p-2 badge badge-primary">Free Plan</span>
+                                            <span class="p-2 badge badge-primary text-center">Free Plan</span>
                                         @else
-                                            <span class="p-2 badge badge-success">Paid Plan</span>
+                                            <span class="p-2 badge badge-success text-center">Paid Plan</span>
                                         @endif
                                     </td>
                                     <td>
                                         @if($shop->setting != null)
                                             @if($shop->setting->text_protection == 1)
-
-                                                <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
+                                                <label class="switch">
+                                                <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" >
                                                 <span class="slider"></span>
+                                                </label>
                                             @endif
                                         @endif
 {{--                                                @if($shop->setting != null)--}}
@@ -98,8 +99,10 @@
                                     <td>
                                         @if($shop->setting != null)
                                             @if($shop->setting->image_protection == 1)
+                                                <label class="switch">
                                                 <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
                                                 <span class="slider"></span>
+                                                </label>
                                             @endif
                                         @endif
                                     </td>
