@@ -51,8 +51,8 @@
                                     @else
                                         <div>
                                             <h3>Image Protection</h3>
-                                            <p>Use this option to enable Image protection </p>
-                                            <p class="text-danger p-1">Upgrade price plan first to enable this feature</p>
+                                            <p class="my-0">Use this option to enable Image protection </p>
+                                            <p class="text-danger ">Upgrade Price plan to enable this feature</p>
                                         </div>
                                         <label class="switch tool my-4">
                                             <div id="disabled-button-wrapper"data-toggle="tooltip" data-placement="bottom" data-title="Upgrade your price plan to enable this feature">
