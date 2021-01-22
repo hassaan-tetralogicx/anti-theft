@@ -306,7 +306,7 @@ return [
 
             [
                 'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'app/uninstalled'),
-                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', '//phpstack-176572-1715310.cloudwaysapps.com/webhook/app-uninstalled')
+                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://phpstack-176572-1715310.cloudwaysapps.com/webhook/app-uninstalled')
             ],
 
     ],
