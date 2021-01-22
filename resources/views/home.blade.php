@@ -23,9 +23,8 @@
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Plan</th>
-                                <th colspan="3">Setting</th>
-{{--                                    <th>Text Protection</th>--}}
-{{--                                    <th>Image Protection</th>--}}
+                                <th scope="col">Text Protection</th>
+                                <th scope="col">Image Protection</th>
 {{--                                    <th>Disable Right Click</th>--}}
                             </tr>
                         </thead>
@@ -36,36 +35,39 @@
                                     <td>{{$shop->email}}</td>
                                     <td>
                                         @if($shop->plan_id == 1)
-                                            <span class="badge badge-primary">Free Plan</span>
+                                            <span class="p-1 badge badge-primary">Free Plan</span>
                                         @else
-                                            <span class="badge badge-success">Paid Plan</span>
+                                            <span class="p-1 badge badge-success">Paid Plan</span>
                                         @endif
                                     </td>
                                     <td>
-<!--                                        --><?php //dd($shop->setting); ?>
-{{--                                        @if($shop->text_protection && $shop->image_protection && $shop->disable_right_click == 1)--}}
-{{--                                            <span>Text Protection</span>--}}
-{{--                                            <span>Image Protection</span>--}}
-{{--                                            <span>Disable Right Click</span>--}}
-{{--                                        @endif--}}
-{{--                                        @if()--}}
-                                                @if($shop->setting != null)
-                                                    @if($shop->setting->image_protection == 1)
-                                                            <span>Image Protection, </span>
-                                                        @if($shop->setting->text_protection == 1)
-                                                            <span>Text Protection </span>
-                                                        @endif
+                                        @if($shop->setting != null)
+                                            @if($shop->setting->image_protection == 1)
+                                                <input @if($status != null) @if($status->image_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
+                                                <span class="slider"></span>
+                                            @endif
+                                            @if($shop->setting->text_protection == 1)
+                                                <input @if($status != null) @if($status->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
+                                                <span class="slider"></span>
+                                            @endif
+                                        @endif
+{{--                                                @if($shop->setting != null)--}}
+{{--                                                    @if($shop->setting->image_protection == 1)--}}
+{{--                                                            <span>Image Protection, </span>--}}
+{{--                                                        @if($shop->setting->text_protection == 1)--}}
+{{--                                                            <span>Text Protection </span>--}}
+{{--                                                        @endif--}}
 
-                                                    @elseif($shop->setting->text_protection ==1)
-                                                            <span>Text Protection, </span>
-                                                        @if($shop->setting->image_protection == 1)
-                                                            <span>Image Protection </span>
-                                                        @endif
-                                                    @endif
+{{--                                                    @elseif($shop->setting->text_protection ==1)--}}
+{{--                                                            <span>Text Protection, </span>--}}
+{{--                                                        @if($shop->setting->image_protection == 1)--}}
+{{--                                                            <span>Image Protection </span>--}}
+{{--                                                        @endif--}}
+{{--                                                    @endif--}}
 
-                                                @else
-                                                   <span>No settings selected yet!</span>
-                                                @endif
+{{--                                                @else--}}
+{{--                                                   <span>No settings selected yet!</span>--}}
+{{--                                                @endif--}}
                                     </td>
                                 </tr>
                             @endforeach
