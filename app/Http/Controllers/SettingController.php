@@ -53,10 +53,11 @@ class SettingController extends Controller
 
         $shop = $request->input('shop');
 //        dd($shop);
+        $user = Auth::user();
         $shop_id = User::where('name', $shop)->first();
 //        dd($shop_id);
         $check_setting = Setting::where('shop_id', $shop_id->id)->first();
-        return view('response')->with('check_setting', $check_setting)->render();
+        return view('response')->with(['check_setting' => $check_setting, 'user' => $user])->render();
 
     }
 

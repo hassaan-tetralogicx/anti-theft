@@ -1,6 +1,6 @@
 
 @if($check_setting != null)
-    @if ($check_setting->plan == 'Free Plan')
+    @if ($user->plan->name == 'Free Plan')
 
             @if($check_setting->text_protection == 1)
 
