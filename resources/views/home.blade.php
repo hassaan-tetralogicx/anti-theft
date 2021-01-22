@@ -36,9 +36,9 @@
                                     <td>{{$shop->email}}</td>
                                     <td>
                                         @if($shop->plan_id == 1)
-                                            Free Plan
+                                            <span class="badge badge-primary">Free Plan</span>
                                         @else
-                                            Paid Plan
+                                            <span class="badge badge-success">Paid Plan</span>
                                         @endif
                                     </td>
                                     <td>
