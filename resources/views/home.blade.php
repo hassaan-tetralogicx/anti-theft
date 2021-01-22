@@ -1,6 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        #disabled-button-wrapper {
+            display: inline-block;
+
+        }
+
+        /*.disable[disabled] {*/
+        /*    pointer-events: none;*/
+        /*}*/
+
+        #disabled-button-wrapper {
+            pointer-events: none;
+        }
+
+        /*#disabled-button-wrapper .slider[disabled] {*/
+        /*    pointer-events: none;*/
+        /*}*/
+
+        #disabled-button-wrapper {
+            cursor: not-allowed;
+        }
+    </style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -42,11 +71,8 @@
                                     </td>
                                     <td>
                                         @if($shop->setting != null)
-                                            @if($shop->setting->image_protection == 1)
-                                                <input @if($shop->setting != null) @if($shop->setting->image_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
-                                                <span class="slider"></span>
-                                            @endif
                                             @if($shop->setting->text_protection == 1)
+
                                                 <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
                                                 <span class="slider"></span>
                                             @endif
@@ -71,7 +97,7 @@
                                     </td>
                                     <td>
                                         @if($shop->setting != null)
-                                            @if($shop->setting->text_protection == 1)
+                                            @if($shop->setting->image_protection == 1)
                                                 <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
                                                 <span class="slider"></span>
                                             @endif
@@ -86,4 +112,5 @@
         </div>
     </div>
 </div>
+
 @endsection

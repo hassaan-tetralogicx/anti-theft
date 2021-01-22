@@ -18,35 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
-        .slider.round {
-            border-radius: 34px;
-        }
 
-        .slider.round:before {
-            border-radius: 50%;
-        }
-        #disabled-button-wrapper {
-            display: inline-block;
-
-        }
-
-        /*.disable[disabled] {*/
-        /*    pointer-events: none;*/
-        /*}*/
-
-        #disabled-button-wrapper {
-            pointer-events: none;
-        }
-
-        /*#disabled-button-wrapper .slider[disabled] {*/
-        /*    pointer-events: none;*/
-        /*}*/
-
-        #disabled-button-wrapper {
-            cursor: not-allowed;
-        }
-    </style>
 </head>
 <body>
     <div id="app">
