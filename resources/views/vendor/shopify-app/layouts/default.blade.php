@@ -79,7 +79,7 @@
             /*    pointer-events: none;*/
             /*}*/
 
-            #disabled-button-wrapper {
+            .tool {
                 pointer-events: none;
 
             }
