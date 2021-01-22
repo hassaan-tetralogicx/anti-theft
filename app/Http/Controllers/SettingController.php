@@ -56,7 +56,6 @@ class SettingController extends Controller
         $shop_id = User::where('name', $shop)->first();
 //        dd($shop_id);
         $check_setting = Setting::where('shop_id', $shop_id->id)->first();
-
         return view('response')->with('check_setting', $check_setting)->render();
 
     }

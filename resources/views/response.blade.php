@@ -1,23 +1,37 @@
 
-    @if ($check_setting != null)
-        @if($check_setting->text_protection == 1)
+@if($check_setting != null)
+    @if ($check_setting->plan == 'Free Plan')
 
-        document.addEventListener('copy paste cut', event => event.preventDefault());
-            document.onkeydown = function (e) {
-            return false;
-            }; document.addEventListener('contextmenu', event => event.preventDefault());
+            @if($check_setting->text_protection == 1)
 
-        @endif
-        @if($check_setting->image_protection == 1)
+                document.addEventListener('copy paste cut', event => event.preventDefault());
+                document.onkeydown = function (e) {
+                return false;
+                }; document.addEventListener('contextmenu', event => event.preventDefault());
 
-            document.ondragstart = function () {
-            return false;
-            };
-            document.onkeydown = function (e) {
-            return false;
-            };
-            document.addEventListener('contextmenu', event => event.preventDefault());
+            @endif
+    @else
+            @if($check_setting->text_protection == 1)
 
-        @endif
+                document.addEventListener('copy paste cut', event => event.preventDefault());
+                document.onkeydown = function (e) {
+                return false;
+                }; document.addEventListener('contextmenu', event => event.preventDefault());
+
+            @endif
+
+            @if($check_setting->image_protection == 1)
+
+                document.ondragstart = function () {
+                return false;
+                };
+                document.onkeydown = function (e) {
+                return false;
+                };
+                document.addEventListener('contextmenu', event => event.preventDefault());
+
+            @endif
     @endif
+@endif
+
 
