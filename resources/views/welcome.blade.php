@@ -7,9 +7,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="px-3 mt-5 pb-md-4 text-center d-flex justify-content-between">
+                <div class="mt-5 pb-md-4 text-center d-flex justify-content-between">
                     <div>
-                        <h1 class="display-4">Desktop Settings</h1>
+                        <h1 class="display-4">Settings</h1>
                     </div>
                     <div>
                         <h4 class="my-1">{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</h4>
@@ -22,20 +22,6 @@
                     </div>
                 </div>
                 <div class="card mt-3" >
-                    <!-- Default panel contents -->
-
-{{--                    <p >Desktop Settings</p>--}}
-{{--                    <div class="card-header d-flex justify-content-between">--}}
-{{--                        <div>--}}
-
-{{--                            <p>{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</p>--}}
-{{--                            @if(Illuminate\Support\Facades\Auth::user()->plan->name == 'Free Plan')--}}
-{{--                                <a href="/pricing-plans">Click here to upgarde Plan</a>--}}
-{{--                            @endif--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between">
                             <div>
@@ -49,7 +35,6 @@
                                 </label>
                             </div>
                         </li>
-
                             <li class="list-group-item d-flex justify-content-between">
 
                                     @if($plan_check == 2)
@@ -66,7 +51,7 @@
                                     @else
                                         <div>
                                             <h3>Image Protection</h3>
-                                            <p class="bg-danger text-white p-1">Upgrade price plan to enable this option</p>
+                                            <p>Enable Image protection <span class="bg-danger text-white p-1">Upgrade price plan first</span></p>
                                         </div>
                                         <label class="switch tool my-4">
                                             <div id="disabled-button-wrapper"data-toggle="tooltip" data-placement="bottom" data-title="Upgrade your price plan to enable this feature">
@@ -75,7 +60,6 @@
                                             </div>
                                         </label>
                                     @endif
-
                             </li>
 
 

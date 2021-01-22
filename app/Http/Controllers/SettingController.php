@@ -56,26 +56,8 @@ class SettingController extends Controller
         $shop_id = User::where('name', $shop)->first();
 //        dd($shop_id);
         $check_setting = Setting::where('shop_id', $shop_id->id)->first();
-        $html = "";
-        if ($check_setting != null) {
-       if($check_setting->text_protection == 1) {
-           $html .= "document.addEventListener('copy paste cut', event => event.preventDefault());
-           document.onkeydown = function (e) {
-                return false;
-           }; document.addEventListener('contextmenu', event => event.preventDefault());";
 
-        }
-
-        if($check_setting->image_protection == 1) {
-            $html .= "document.ondragstart = function () {
-                return false;
-            }; document.onkeydown = function (e) {
-                return false;
-           }; document.addEventListener('contextmenu', event => event.preventDefault());";
-        }
-        }
-
-        return response($html)->header('Content-Type', 'application/javascript');
+        return view('response')->with('check_setting', $check_setting)->render();
 
     }
 
