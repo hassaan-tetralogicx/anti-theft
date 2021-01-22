@@ -7,20 +7,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <div class="px-3 py-3 pb-md-4 text-center d-flex justify-content-between">
+                    <div>
+                        <h1 class="display-4">Desktop Settings</h1>
+                    </div>
+                    <div>
+                        <p class="my-1">{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</p>
+                        @if(Illuminate\Support\Facades\Auth::user()->plan->name == 'Free Plan')
+                            <a href="/pricing-plans" class="btn btn-primary">upgarde Plan</a>
+                        @endif
+                        {{--                            <a class="btn btn-light my-3" href="/">Back</a>--}}
+                    </div>
+                </div>
                 <div class="card" style="margin:70px 0">
                     <!-- Default panel contents -->
-                    <div class="px-0 py-3 pb-md-4 mx-auto text-center d-flex justify-content-between">
-                        <div>
-                            <h1 class="display-2">Desktop Settings</h1>
-                        </div>
-                        <div>
-                            <p>{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</p>
-                            @if(Illuminate\Support\Facades\Auth::user()->plan->name == 'Free Plan')
-                                <a href="/pricing-plans" class="btn btn-primary">upgarde Plan</a>
-                            @endif
-{{--                            <a class="btn btn-light my-3" href="/">Back</a>--}}
-                        </div>
-                    </div>
+
 {{--                    <p >Desktop Settings</p>--}}
 {{--                    <div class="card-header d-flex justify-content-between">--}}
 {{--                        <div>--}}
