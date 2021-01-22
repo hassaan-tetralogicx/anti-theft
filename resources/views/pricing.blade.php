@@ -37,7 +37,7 @@
                     <h4 class="my-0 font-weight-normal">Paid Plan</h4>
                 </div>
                 <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$5 <small class="text-muted">/ mo</small></h1>
+                    <h1 class="card-title pricing-card-title">$299 <small class="text-muted">/ mo</small></h1>
                     <ul class="list-unstyled mt-4 mb-4">
                         <li>Image Protection</li>
                         <li>Text Protection</li>

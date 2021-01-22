@@ -57,8 +57,7 @@ class AppUninstalledJob implements ShouldQueue
         if($setting != null){
             $setting->delete();
         }
-        $shop->delete();
-
+        $shop->forceDelete();
 
         // Do what you wish with the data
         // Access domain name as $this->shopDomain->toNative()
