@@ -14,7 +14,7 @@
                     <div>
                         <p class="my-1">{{ Illuminate\Support\Facades\Auth::user()->plan->name }}</p>
                         @if(Illuminate\Support\Facades\Auth::user()->plan->name == 'Free Plan')
-                            <a href="/pricing-plans" class="btn btn-primary">upgarde Plan</a>
+                            <a href="/pricing-plans" class="btn btn-primary">Upgarde Plan</a>
                         @endif
                         {{--                            <a class="btn btn-light my-3" href="/">Back</a>--}}
                     </div>
@@ -36,7 +36,8 @@
 
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-flex justify-content-between">
-                            <div>Text Protection
+                            <div>
+                                <h2>Text Protection</h2>
                                 <p>Use this option to enable text protection</p>
                             </div>
                             <div>
@@ -52,7 +53,7 @@
 
                                     @if($plan_check == 2)
                                         <div>
-                                        Image Protection
+                                            <h2>Image Protection</h2>
                                             <p>Use this option to enable text protection</p>
                                         </div>
                                         <div>
@@ -63,7 +64,7 @@
                                         </div>
                                     @else
                                             <div>
-                                                Image Protection
+                                                <h2>Image Protection</h2>
                                                 <p>Upgrade price plan to enable this option</p>
                                             </div>
                                             <label class="switch ">
