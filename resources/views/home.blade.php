@@ -43,11 +43,11 @@
                                     <td>
                                         @if($shop->setting != null)
                                             @if($shop->setting->image_protection == 1)
-                                                <input @if($status != null) @if($status->image_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
+                                                <input @if($shop->setting != null) @if($shop->setting->image_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
                                                 <span class="slider"></span>
                                             @endif
                                             @if($shop->setting->text_protection == 1)
-                                                <input @if($status != null) @if($status->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
+                                                <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
                                                 <span class="slider"></span>
                                             @endif
                                         @endif
