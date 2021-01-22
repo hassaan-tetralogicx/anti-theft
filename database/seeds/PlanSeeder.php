@@ -26,7 +26,7 @@ class PlanSeeder extends Seeder
         DB::table('plans')->insert([
             'type' => 'RECURRING',
             'name' => 'Paid Plan',
-            'price' => 5.00,
+            'price' => 299.00,
             'interval' => 'EVERY_30_DAYS',
             'capped_amount' => 10.00,
             'terms' => 'Test terms',
