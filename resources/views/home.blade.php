@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-12 p-0">
             <h1 class="my-3">Admin Dashboard</h1>
             <div class="card">
 {{--                <div class="card-header">{{ __('Admin Dashboard') }}</div>--}}
@@ -15,7 +15,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between px-3 pt-4">
                         <h4 class="card-title">Total Shops using Anti-Theft </h4>
                         <h3 class="text-primary"> {{ count($shops) }} </h3>
                     </div>
@@ -78,7 +78,7 @@
                     </table>
                 </div>
             </div>
-            <div class="float-right">{{ $shops->links() }}</div>
+            <div class="float-right py-3">{{ $shops->links() }}</div>
         </div>
     </div>
 </div>
