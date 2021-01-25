@@ -46,47 +46,39 @@
                                         @if($shop->setting != null)
                                             @if($shop->setting->text_protection == 1)
                                                 <label class="switch">
-                                                <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
-                                                <span class="slider"></span>
+                                                    <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
+                                                    <span class="slider"></span>
+                                                </label>
+                                            @else
+                                                <label class="switch">
+                                                    <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="status" disabled>
+                                                    <span class="slider"></span>
                                                 </label>
                                             @endif
                                         @endif
-{{--                                                @if($shop->setting != null)--}}
-{{--                                                    @if($shop->setting->image_protection == 1)--}}
-{{--                                                            <span>Image Protection, </span>--}}
-{{--                                                        @if($shop->setting->text_protection == 1)--}}
-{{--                                                            <span>Text Protection </span>--}}
-{{--                                                        @endif--}}
-
-{{--                                                    @elseif($shop->setting->text_protection ==1)--}}
-{{--                                                            <span>Text Protection, </span>--}}
-{{--                                                        @if($shop->setting->image_protection == 1)--}}
-{{--                                                            <span>Image Protection </span>--}}
-{{--                                                        @endif--}}
-{{--                                                    @endif--}}
-
-{{--                                                @else--}}
-{{--                                                   <span>No settings selected yet!</span>--}}
-{{--                                                @endif--}}
                                     </td>
                                     <td>
                                         @if($shop->setting != null)
                                             @if($shop->setting->image_protection == 1)
                                                 <label class="switch">
-                                                <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
-                                                <span class="slider"></span>
+                                                    <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
+                                                    <span class="slider"></span>
+                                                </label>
+                                            @else
+                                                <label class="switch">
+                                                    <input type="checkbox" class=" status" disabled>
+                                                    <span class="slider"></span>
                                                 </label>
                                             @endif
                                         @endif
                                     </td>
                                 </tr>
                             @endforeach
-
                         </tbody>
                     </table>
-                        {{ $shops->links() }}
                 </div>
             </div>
+            <div class="float-right">{{ $shops->links() }}</div>
         </div>
     </div>
 </div>
