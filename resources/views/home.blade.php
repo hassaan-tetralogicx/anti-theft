@@ -15,9 +15,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="d-flex justify-content-between px-3 pt-4">
-                        <h4 class="card-title">Total Shops using Anti-Theft </h4>
-                        <h3 class="text-primary"> {{ count($shops) }} </h3>
+                    <div class="d-flex px-3 pt-4">
+                        <h4 class="card-title pt-1">Total Shops using Anti-Theft -</h4>
+                        <h3 class="text-primary ml-4"> {{ count($shops) }} </h3>
                     </div>
                     <table class="table table-hover mt-3">
                         <thead>
