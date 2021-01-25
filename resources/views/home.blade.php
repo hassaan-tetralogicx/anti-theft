@@ -17,7 +17,7 @@
                     @endif
                     <div class="d-flex px-3 pt-4">
                         <h4 class="card-title pt-1">Total Shops using Anti-Theft -</h4>
-                        <h3 class="text-primary ml-4"> {{ count($shops) }} </h3>
+                        <h3 class="text-primary ml-2"> {{ count($shops) }} </h3>
                     </div>
                     <table class="table table-hover mt-3">
                         <thead>
@@ -58,18 +58,25 @@
                                         @endif
                                     </td>
                                     <td>
-                                        @if($shop->setting != null)
-                                            @if($shop->setting->image_protection == 1)
-                                                <label class="switch">
-                                                    <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
-                                                    <span class="slider"></span>
-                                                </label>
-                                            @else
-                                                <label class="switch">
-                                                    <input type="checkbox" class=" status" disabled>
-                                                    <span class="slider"></span>
-                                                </label>
+                                        @if($shop->plan_id != 1)
+                                            @if($shop->setting != null)
+                                                @if($shop->setting->image_protection == 1)
+                                                    <label class="switch">
+                                                        <input @if($shop->setting != null) @if($shop->setting->text_protection == 1) checked @endif @endif type="checkbox" class="success status" disabled>
+                                                        <span class="slider"></span>
+                                                    </label>
+                                                @else
+                                                    <label class="switch">
+                                                        <input type="checkbox" class=" status" disabled>
+                                                        <span class="slider"></span>
+                                                    </label>
+                                                @endif
                                             @endif
+                                        @else
+                                            <label class="switch">
+                                                <input type="checkbox" class=" status" disabled>
+                                                <span class="slider"></span>
+                                            </label>
                                         @endif
                                     </td>
                                 </tr>
