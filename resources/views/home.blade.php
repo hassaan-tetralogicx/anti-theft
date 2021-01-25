@@ -5,8 +5,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <h1 class="display-4">Admin Dashboard</h1>
             <div class="card">
-                <div class="card-header">{{ __('Admin Dashboard') }}</div>
+{{--                <div class="card-header">{{ __('Admin Dashboard') }}</div>--}}
 
                 <div class="card-body">
                     @if (session('status'))
@@ -24,7 +25,7 @@
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Plan</th>
-                                <th scope="col" class="text-center">Text Protection</th>
+                                <th scope="col" class="text-right">Text Protection</th>
                                 <th scope="col" class="text-right">Image Protection</th>
 {{--                                    <th>Disable Right Click</th>--}}
                             </tr>
