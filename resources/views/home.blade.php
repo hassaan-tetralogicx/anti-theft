@@ -4,12 +4,12 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12 p-0">
+        <div class="col-md-12">
             <h1 class="my-3">Admin Dashboard</h1>
             <div class="card">
 {{--                <div class="card-header">{{ __('Admin Dashboard') }}</div>--}}
 
-                <div class="card-body">
+                <div class="card-body p-0">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
