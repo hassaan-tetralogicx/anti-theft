@@ -12,7 +12,7 @@
                 return false;
                 }
                 else {
-                console.log(435435);
+{{--                console.log(435435);--}}
                 return true;
                 }
                 }
@@ -41,7 +41,7 @@
                 return false;
                 }
                 else {
-                console.log(435435);
+{{--                console.log(435435);--}}
                 return true;
                 }
                 }
@@ -52,7 +52,6 @@
 {{--                return false;--}}
 {{--                }; document.addEventListener('contextmenu', event => event.preventDefault());--}}
 {{--                document.onselectstart = new Function ("return false");--}}
-
 
             @endif
 
@@ -66,7 +65,6 @@
                 };
                 document.addEventListener('contextmenu', event => event.preventDefault());
                 document.onselectstart = new Function ("return false");
-
 
             @endif
         @endif

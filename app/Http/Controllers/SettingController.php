@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Setting;
-use App\Plan;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,14 +26,12 @@ class SettingController extends Controller
         $find_id = Setting::where('shop_id', $id)->first();
 
         if ($find_id != null) {
-
             if('text_protection' == $request->type){
                 $find_id->text_protection = $request->status;
             }
             elseif('image_protection' == $request->type){
                 $find_id->image_protection = $request->status;
             }
-
             $find_id->save();
         }
         else {
@@ -43,7 +40,6 @@ class SettingController extends Controller
             $status->text_protection = $request->status;
             $status->image_protection = false;
             $status->save();
-
         }
 //        return response()->json
     }

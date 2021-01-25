@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $shops = User::where('email', "!=" , 'admin@gmail.com')->get();
+        $shops = User::where('email', "!=" , 'admin@gmail.com')->get()->paginate(4);
 //        dd($shops);
         return view('home')->with('shops', $shops);
     }

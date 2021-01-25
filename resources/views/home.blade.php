@@ -81,6 +81,7 @@
                                     </td>
                                 </tr>
                             @endforeach
+                            {{ $shops->links() }}
                         </tbody>
                     </table>
                 </div>
