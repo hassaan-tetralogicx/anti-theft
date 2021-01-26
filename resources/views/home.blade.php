@@ -16,7 +16,7 @@
                         </div>
                     @endif
                     <div class="d-flex px-3 pt-4">
-                        <h4 class="card-title pt-1">Total Shops using Anti-Theft -</h4>
+                        <h4 class="card-title pt-1">Total Shops using Box Locker -</h4>
                         <h3 class="text-primary ml-2"> {{ count($shops) }} </h3>
                     </div>
                     <table class="table table-hover mt-3">
